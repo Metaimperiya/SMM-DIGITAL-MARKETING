@@ -20,12 +20,12 @@
     
     <!-- 🎭 OPEN GRAPH -->
     <meta property="og:title" content="SMM и Digital Marketing | Киберпанк руководство 160 тем">
-    <meta property="og:description" content="160 тем о SMM, маркетинге, автоматизации и AI в киберпанк стиле. От основ до продвинутых стратегий.">
+    <meta property="og:description" content="160 тем о SMM, маркетинге, автоматизации и AI в киберпанк стиле.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://smm-cyberpunk-guide.com/og-image.jpg">
+    <meta property="og:image" content="https://smm-digital-marketing.vercel.app/smm-digital-marketing.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://smm-cyberpunk-guide.com/">
+    <meta property="og:url" content="https://smm-digital-marketing.vercel.app/">
     <meta property="og:site_name" content="SMM Cyberpunk Guide">
     
     <!-- 🐦 TWITTER CARD -->
@@ -721,6 +721,47 @@
             line-height: 1.6;
         }
 
+        /* Кнопка "Наверх" */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.8rem;
+            z-index: 9999;
+            border: 2px solid var(--neon-blue);
+            color: white;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            transform: translateY(0);
+            display: flex;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 
+                0 0 30px var(--neon-blue),
+                0 0 50px var(--neon-purple);
+            background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
+        }
+
+        .back-to-top:active {
+            transform: translateY(0);
+        }
+
         /* Адаптивность */
         @media (max-width: 1200px) {
             .hologram-title {
@@ -759,6 +800,14 @@
             .data-stats {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            
+            .back-to-top {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
             }
         }
 
@@ -914,7 +963,7 @@
                     </div>
                 </div>
                 <p class="block-content" itemprop="description">KPI, CTR, CPM, CPA, воронки продаж, лидогенерация, ретаргетинг, монетизация.</p>
-                <div class="cyber-tags">
+                                <div class="cyber-tags">
                     <span class="cyber-tag">KPI</span>
                     <span class="cyber-tag">CTR</span>
                     <span class="cyber-tag">Ретаргет</span>
@@ -936,7 +985,7 @@
                     </div>
                 </div>
                 <p class="block-content" itemprop="description">Теневой бан, блокировки, модерация, авторские права, хейт, автоматизация.</p>
-                                <div class="cyber-tags">
+                <div class="cyber-tags">
                     <span class="cyber-tag">Блокировки</span>
                     <span class="cyber-tag">Безопасность</span>
                     <span class="cyber-tag">Автоматизация</span>
@@ -1337,6 +1386,11 @@
         </div>
     </div>
 
+    <!-- Кнопка "Наверх" -->
+    <button class="back-to-top" id="backToTop" aria-label="Вернуться наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- JavaScript -->
     <script>
         // 🔧 Плавающее окно
@@ -1504,8 +1558,8 @@
         }
 
         function triggerDownload(type) {
-            alert('В реальном проекте здесь будет скачивание файла в формате ' + type.toUpperCase() + '\n\nДля демо: книга готова к скачиванию!');
-            closeModal();
+            alert('В реальном проекте здесь будет скачивание файла в формате ' + type.toUpperCase() + '\n\nДля демо: книга готова к скачиванию! 
+                    closeModal();
         }
 
         function showAllTopics() {
@@ -1543,7 +1597,7 @@
             }, 3000);
         }
 
-                // 🌌 Создание частиц на фоне
+        // 🌌 Создание частиц на фоне
         function createParticles() {
             const particlesContainer = document.createElement('div');
             particlesContainer.style.cssText = `
@@ -1783,6 +1837,40 @@
 
         // Запускаем матрицу после загрузки
         setTimeout(matrixRainEffect, 1000);
+
+        // ========== КНОПКА "НАВЕРХ" ==========
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Показать/скрыть кнопку при прокрутке
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            
+            if (scrollTop > 500) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        // Плавная прокрутка наверх
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            
+            // Анимация клика
+            this.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 200);
+        });
+
+        // Инициализация кнопки при загрузке
+        window.addEventListener('load', function() {
+            backToTopButton.style.transition = 'opacity 0.3s, transform 0.3s';
+        });
     </script>
 </body>
 </html>
