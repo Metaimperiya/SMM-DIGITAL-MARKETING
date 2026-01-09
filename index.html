@@ -62,18 +62,15 @@
             --cyber-gray: #1a1a2e;
             --glow: 0 0 20px;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: 'Courier New', 'Segoe UI', monospace;
             background: var(--dark-bg);
@@ -83,7 +80,6 @@
             min-height: 100vh;
             perspective: 1000px;
         }
-
         /* 🔍 СКРЫТЫЙ КОНТЕНТ ДЛЯ SEO */
         .seo-hidden {
             position: absolute;
@@ -96,7 +92,6 @@
             white-space: nowrap;
             border: 0;
         }
-
         /* Киберпанк фон с частицами */
         #cyber-bg {
             position: fixed;
@@ -110,7 +105,6 @@
                 radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 80%, rgba(0, 255, 136, 0.1) 0%, transparent 50%);
         }
-
         .cyber-grid {
             position: fixed;
             top: 0;
@@ -124,7 +118,6 @@
             z-index: -1;
             opacity: 0.3;
         }
-
         /* Основные элементы */
         .container {
             max-width: 1400px;
@@ -133,7 +126,6 @@
             position: relative;
             z-index: 2;
         }
-
         /* Неоновая панель сверху */
         .cyber-panel {
             position: fixed;
@@ -147,7 +139,6 @@
             z-index: 1000;
             padding: 15px 0;
         }
-
         .panel-content {
             display: flex;
             justify-content: space-between;
@@ -156,7 +147,6 @@
             margin: 0 auto;
             padding: 0 20px;
         }
-
         .hologram-logo {
             font-size: 2rem;
             font-weight: 900;
@@ -168,12 +158,10 @@
             text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
             letter-spacing: 3px;
         }
-
         .cyber-nav {
             display: flex;
             gap: 30px;
         }
-
         .nav-link {
             color: #aaa;
             text-decoration: none;
@@ -186,7 +174,6 @@
             transition: all 0.3s;
             position: relative;
         }
-
         .nav-link::before {
             content: '▸';
             position: absolute;
@@ -195,23 +182,19 @@
             transition: opacity 0.3s;
             color: var(--neon-blue);
         }
-
         .nav-link:hover::before {
             opacity: 1;
         }
-
         .nav-link:hover {
             color: var(--neon-blue);
             border-color: var(--neon-blue);
             text-shadow: 0 0 10px var(--neon-blue);
         }
-
         .data-stats {
             display: flex;
             gap: 20px;
             font-size: 0.9rem;
         }
-
         .stat {
             display: flex;
             flex-direction: column;
@@ -221,19 +204,16 @@
             border-radius: 4px;
             border: 1px solid rgba(0, 243, 255, 0.3);
         }
-
         .stat-value {
             color: var(--neon-blue);
             font-size: 1.2rem;
             font-weight: 700;
         }
-
         .stat-label {
             color: #888;
             font-size: 0.8rem;
             text-transform: uppercase;
         }
-
         /* Главный хедер с голограммой */
         .main-header {
             margin-top: 120px;
@@ -241,7 +221,6 @@
             margin-bottom: 80px;
             position: relative;
         }
-
         .hologram-title {
             font-size: 4.5rem;
             font-weight: 900;
@@ -254,7 +233,6 @@
                 0 0 30px var(--neon-blue);
             animation: glitch 3s infinite;
         }
-
         @keyframes glitch {
             0%, 100% { transform: translate(0); }
             20% { transform: translate(-2px, 2px); }
@@ -262,7 +240,6 @@
             60% { transform: translate(2px, 2px); }
             80% { transform: translate(2px, -2px); }
         }
-
         .cyber-subtitle {
             font-size: 1.3rem;
             color: #aaa;
@@ -273,7 +250,6 @@
             padding: 20px;
             background: rgba(255, 0, 255, 0.05);
         }
-
         /* Плавающие блоки книги */
         .book-blocks {
             display: grid;
@@ -282,7 +258,6 @@
             margin-bottom: 100px;
             perspective: 1000px;
         }
-
         .cyber-block {
             background: rgba(26, 26, 46, 0.8);
             border: 1px solid rgba(0, 243, 255, 0.3);
@@ -295,7 +270,6 @@
             cursor: pointer;
             transform-style: preserve-3d;
         }
-
         .cyber-block:hover {
             transform: translateY(-10px) rotateX(5deg);
             box-shadow: 
@@ -303,7 +277,6 @@
                 0 0 60px rgba(0, 243, 255, 0.1);
             border-color: var(--neon-blue);
         }
-
         .block-glow {
             position: absolute;
             top: 0;
@@ -318,11 +291,9 @@
             );
             transition: left 0.7s;
         }
-
         .cyber-block:hover .block-glow {
             left: 100%;
         }
-
         .block-header {
             display: flex;
             align-items: center;
@@ -330,7 +301,6 @@
             padding-bottom: 15px;
             border-bottom: 1px solid rgba(0, 243, 255, 0.3);
         }
-
         .block-icon {
             width: 50px;
             height: 50px;
@@ -343,7 +313,6 @@
             font-size: 1.5rem;
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
         }
-
         .block-title {
             font-size: 1.8rem;
             font-weight: 700;
@@ -352,26 +321,22 @@
             background-clip: text;
             color: transparent;
         }
-
         .block-range {
             color: var(--neon-purple);
             font-weight: 600;
             font-size: 1.1rem;
             margin-top: 5px;
         }
-
         .block-content {
             color: #ccc;
             margin-bottom: 20px;
             line-height: 1.8;
         }
-
         .cyber-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
-
         .cyber-tag {
             padding: 8px 15px;
             background: rgba(0, 243, 255, 0.1);
@@ -381,13 +346,11 @@
             color: var(--neon-blue);
             transition: all 0.3s;
         }
-
         .cyber-tag:hover {
             background: rgba(0, 243, 255, 0.2);
             transform: scale(1.1);
             box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
         }
-
         /* 3D меню параграфов */
         .paragraphs-menu {
             background: rgba(26, 26, 46, 0.9);
@@ -398,7 +361,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .menu-title {
             font-size: 2.5rem;
             text-align: center;
@@ -407,7 +369,6 @@
             text-transform: uppercase;
             letter-spacing: 2px;
         }
-
         .paragraph-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -416,22 +377,18 @@
             overflow-y: auto;
             padding-right: 20px;
         }
-
         /* Стилизация скроллбара */
         .paragraph-grid::-webkit-scrollbar {
             width: 8px;
         }
-
         .paragraph-grid::-webkit-scrollbar-track {
             background: rgba(0, 243, 255, 0.1);
             border-radius: 4px;
         }
-
         .paragraph-grid::-webkit-scrollbar-thumb {
             background: var(--neon-blue);
             border-radius: 4px;
         }
-
         .para-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(0, 243, 255, 0.2);
@@ -441,13 +398,11 @@
             position: relative;
             cursor: pointer;
         }
-
         .para-card:hover {
             transform: translateY(-5px);
             border-color: var(--neon-blue);
             box-shadow: 0 10px 20px rgba(0, 243, 255, 0.2);
         }
-
         .para-number {
             position: absolute;
             top: -15px;
@@ -463,7 +418,6 @@
             font-size: 1.2rem;
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
         }
-
         .para-title {
             font-size: 1.3rem;
             font-weight: 600;
@@ -471,20 +425,17 @@
             color: #fff;
             padding-top: 15px;
         }
-
         .para-content {
             color: #aaa;
             font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 15px;
         }
-
         .para-keywords {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
         }
-
         .keyword {
             padding: 4px 12px;
             background: rgba(0, 243, 255, 0.1);
@@ -492,7 +443,6 @@
             font-size: 0.8rem;
             color: var(--neon-blue);
         }
-
         /* Плавающие окна */
         .floating-window {
             position: fixed;
@@ -509,7 +459,6 @@
             max-width: 500px;
             animation: float 6s ease-in-out infinite;
         }
-
         .window-header {
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
             padding: 15px 20px;
@@ -518,40 +467,33 @@
             align-items: center;
             cursor: move;
         }
-
         .window-title {
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .window-controls {
             display: flex;
             gap: 10px;
         }
-
         .window-btn {
             width: 12px;
             height: 12px;
             border-radius: 50%;
             cursor: pointer;
         }
-
         .close-btn { background: var(--neon-red); }
         .min-btn { background: var(--neon-green); }
         .max-btn { background: var(--neon-blue); }
-
         .window-content {
             padding: 20px;
             max-height: 400px;
             overflow-y: auto;
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
         }
-
         /* Terminal эффекты */
         .terminal {
             background: rgba(0, 0, 0, 0.9);
@@ -562,31 +504,26 @@
             position: relative;
             overflow: hidden;
         }
-
         .terminal-header {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
             color: var(--neon-green);
         }
-
         .terminal-title {
             font-family: monospace;
             font-size: 1.2rem;
             margin-left: 15px;
         }
-
         .terminal-content {
             font-family: monospace;
             color: var(--neon-green);
             line-height: 1.8;
         }
-
         .terminal-line {
             margin-bottom: 10px;
             animation: typing 3s steps(40) infinite;
         }
-
         .cursor {
             display: inline-block;
             width: 8px;
@@ -596,17 +533,14 @@
             vertical-align: middle;
             margin-left: 2px;
         }
-
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
         }
-
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
-
         /* Кибер кнопки */
         .cyber-button {
             display: inline-flex;
@@ -627,7 +561,6 @@
             font-size: 1.1rem;
             margin: 20px 0;
         }
-
         .cyber-button::before {
             content: '';
             position: absolute;
@@ -643,11 +576,9 @@
             );
             transition: left 0.7s;
         }
-
         .cyber-button:hover::before {
             left: 100%;
         }
-
         .cyber-button:hover {
             background: rgba(0, 243, 255, 0.1);
             box-shadow: 
@@ -655,7 +586,6 @@
                 inset 0 0 20px rgba(0, 243, 255, 0.1);
             transform: translateY(-3px);
         }
-
         /* Анимация загрузки */
         .cyber-loader {
             width: 100%;
@@ -666,14 +596,12 @@
             left: 0;
             z-index: 1002;
         }
-
         .loader-progress {
             height: 100%;
             background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
             width: 0%;
             transition: width 0.3s;
         }
-
         /* SEO-дружественный контент */
         .seo-content {
             background: rgba(26, 26, 46, 0.8);
@@ -682,37 +610,31 @@
             margin: 60px 0;
             border: 1px solid rgba(0, 243, 255, 0.2);
         }
-
         .seo-content h2 {
             color: var(--neon-blue);
             margin-bottom: 25px;
             font-size: 2rem;
         }
-
         .seo-content h3 {
             color: var(--neon-green);
             margin: 20px 0 15px;
             font-size: 1.5rem;
         }
-
         .seo-content p {
             color: #ccc;
             line-height: 1.8;
             margin-bottom: 15px;
             font-size: 1.1rem;
         }
-
         .seo-content ul {
             margin-left: 25px;
             margin-bottom: 20px;
         }
-
         .seo-content li {
             color: #ccc;
             margin-bottom: 8px;
             line-height: 1.6;
         }
-
         /* Кнопка "Наверх" */
         .back-to-top {
             position: fixed;
@@ -735,13 +657,11 @@
             opacity: 0;
             transform: translateY(20px);
         }
-
         .back-to-top.show {
             opacity: 1;
             transform: translateY(0);
             display: flex;
         }
-
         .back-to-top:hover {
             transform: translateY(-5px);
             box-shadow: 
@@ -749,51 +669,41 @@
                 0 0 50px var(--neon-purple);
             background: linear-gradient(135deg, var(--neon-purple), var(--neon-blue));
         }
-
         .back-to-top:active {
             transform: translateY(0);
         }
-
         /* Адаптивность */
         @media (max-width: 1200px) {
             .hologram-title {
                 font-size: 3.5rem;
             }
-            
             .book-blocks {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-
         @media (max-width: 768px) {
             .cyber-panel {
                 padding: 10px 0;
             }
-            
             .panel-content {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .cyber-nav {
                 gap: 10px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
             .hologram-title {
                 font-size: 2.5rem;
             }
-            
             .book-blocks {
                 grid-template-columns: 1fr;
             }
-            
             .data-stats {
                 flex-wrap: wrap;
                 justify-content: center;
             }
-            
             .back-to-top {
                 width: 50px;
                 height: 50px;
@@ -802,21 +712,17 @@
                 right: 20px;
             }
         }
-
         @media (max-width: 480px) {
             .container {
                 padding: 10px;
             }
-            
             .hologram-title {
                 font-size: 2rem;
             }
-            
             .cyber-subtitle {
                 font-size: 1rem;
                 padding: 15px;
             }
-            
             .paragraph-grid {
                 grid-template-columns: 1fr;
             }
@@ -831,16 +737,13 @@
         <p>Ключевые темы: основы SMM, контент-маркетинг, таргетированная реклама, SEO, аналитика KPI, автоматизация процессов, AI генерация контента, работа с блогерами, монетизация, карьера в digital.</p>
         <p>Бесплатное скачивание полной книги в формате PDF с бонусными материалами.</p>
     </div>
-
     <!-- Анимированный фон -->
     <div id="cyber-bg"></div>
     <div class="cyber-grid"></div>
-
     <!-- Лоадер -->
     <div class="cyber-loader">
         <div class="loader-progress" id="loader"></div>
     </div>
-
     <!-- Неоновая панель -->
     <div class="cyber-panel">
         <div class="panel-content">
@@ -854,7 +757,6 @@
                     <a href="#download" class="nav-link">Скачать</a>
                 </div>
             </nav>
-            
             <div class="data-stats">
                 <div class="stat">
                     <span class="stat-value">160</span>
@@ -871,7 +773,6 @@
             </div>
         </div>
     </div>
-
     <!-- Главный заголовок -->
     <div class="container">
         <header class="main-header" role="banner">
@@ -879,7 +780,6 @@
             <p class="cyber-subtitle">
                 Полное кибер-руководство: 160 параграфов о продвижении, автоматизации, AI и хакерских стратегиях в digital-мире 2024
             </p>
-            
             <div style="text-align: center;">
                 <a href="#download" class="cyber-button">
                     <i class="fas fa-download"></i>
@@ -887,17 +787,13 @@
                 </a>
             </div>
         </header>
-
         <!-- SEO-дружественный контент -->
         <section id="seo" class="seo-content" itemscope itemtype="https://schema.org/Book">
             <meta itemprop="name" content="SMM и Digital Marketing: 160 тем">
             <meta itemprop="author" content="SMM Cyberpunk Guide">
             <meta itemprop="description" content="Киберпанк руководство по SMM и Digital Marketing с 160 темами о маркетинге в соцсетях">
-            
             <h2>Полное руководство по SMM и Digital Marketing</h2>
-            
             <p itemprop="about">Эта книга представляет собой исчерпывающее руководство по современному маркетингу в социальных сетях, охватывающее 160 ключевых тем, распределенных по 8 тематическим блокам. Каждый параграф — это законченная тема с практическими рекомендациями, кейсами и инструментами для реализации.</p>
-
             <h3>Основные разделы книги:</h3>
             <ul>
                 <li><strong>SMM основы и стратегии</strong> — от понимания алгоритмов до создания контент-планов</li>
@@ -908,14 +804,11 @@
                 <li><strong>Монетизация и масштабирование</strong> — стратегии роста и увеличения доходов</li>
                 <li><strong>Карьера в digital</strong> — развитие от специалиста до эксперта и консультанта</li>
             </ul>
-
             <h3>Для кого эта книга:</h3>
             <p>Руководство будет полезно как начинающим SMM-специалистам, так и опытным маркетологам, предпринимателям, владельцам бизнеса и всем, кто хочет систематизировать знания в области digital-маркетинга.</p>
-
             <h3>Формат и структура:</h3>
             <p>Каждый из 160 параграфов содержит: теоретическую основу, практические рекомендации, инструменты для реализации, кейсы из практики и ключевые слова для запоминания. Книга построена по принципу "от простого к сложному" и позволяет изучать темы как последовательно, так и выборочно.</p>
         </section>
-
         <!-- Блоки книги -->
         <section id="blocks" class="book-blocks">
             <!-- Блок 1 -->
@@ -961,7 +854,6 @@
                     <span class="cyber-tag">Ретаргет</span>
                 </div>
             </article>
-
             <!-- Блок 3 -->
             <article class="cyber-block" itemscope itemtype="https://schema.org/Book">
                 <meta itemprop="name" content="Безопасность SMM">
@@ -983,7 +875,6 @@
                     <span class="cyber-tag">Автоматизация</span>
                 </div>
             </article>
-
             <!-- Блок 4 -->
             <article class="cyber-block" itemscope itemtype="https://schema.org/Book">
                 <meta itemprop="name" content="AI и инструменты">
@@ -1005,7 +896,6 @@
                     <span class="cyber-tag">Автоматизация</span>
                 </div>
             </article>
-
             <!-- Блок 5 -->
             <article class="cyber-block" itemscope itemtype="https://schema.org/Book">
                 <meta itemprop="name" content="Конкуренция и схемы">
@@ -1027,7 +917,6 @@
                     <span class="cyber-tag">Фейки</span>
                 </div>
             </article>
-
             <!-- Блок 6 -->
             <article class="cyber-block" itemscope itemtype="https://schema.org/Book">
                 <meta itemprop="name" content="Профессии в Digital">
@@ -1050,11 +939,9 @@
                 </div>
             </article>
         </section>
-
         <!-- 3D Меню параграфов -->
         <section id="paragraphs" class="paragraphs-menu">
             <h2 class="menu-title">ПАРАГРАФЫ-КОДЫ</h2>
-            
             <div class="paragraph-grid">
                 <!-- Параграф 1 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
@@ -1069,7 +956,6 @@
                         <span class="keyword">Digital</span>
                     </div>
                 </article>
-
                 <!-- Параграф 2 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="SOCIAL MEDIA">
@@ -1083,7 +969,6 @@
                         <span class="keyword">Аудитория</span>
                     </div>
                 </article>
-
                 <!-- Параграф 3 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="Продвижение в соцсетях">
@@ -1097,7 +982,6 @@
                         <span class="keyword">Реклама</span>
                     </div>
                 </article>
-
                 <!-- Параграф 4 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="Контент-маркетинг">
@@ -1111,7 +995,6 @@
                         <span class="keyword">Продажи</span>
                     </div>
                 </article>
-
                 <!-- Параграф 5 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="Личный бренд">
@@ -1125,7 +1008,6 @@
                         <span class="keyword">Узнаваемость</span>
                     </div>
                 </article>
-
                 <!-- Параграф 11 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="Instagram SMM">
@@ -1139,7 +1021,6 @@
                         <span class="keyword">Визуал</span>
                     </div>
                 </article>
-
                 <!-- Параграф 12 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="TikTok продвижение">
@@ -1153,7 +1034,6 @@
                         <span class="keyword">Алгоритмы</span>
                     </div>
                 </article>
-
                 <!-- Параграф 36 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="Таргетированная реклама">
@@ -1167,7 +1047,6 @@
                         <span class="keyword">Аудитория</span>
                     </div>
                 </article>
-
                 <!-- Параграф 56 -->
                 <article class="para-card" itemscope itemtype="https://schema.org/CreativeWork">
                     <meta itemprop="name" content="Теневой бан">
@@ -1183,7 +1062,6 @@
                 </article>
             </div>
         </section>
-
         <!-- Плавающие окна -->
         <div class="floating-window" id="cyber-window" style="top: 100px; right: 50px;">
             <div class="window-header" id="window-header">
@@ -1205,7 +1083,6 @@
                         <div style="width: 100%; height: 100%; background: var(--neon-blue); border-radius: 4px;"></div>
                     </div>
                 </div>
-                
                 <div style="margin: 15px 0;">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
                         <span>Активных тем:</span>
@@ -1215,7 +1092,6 @@
                         <div style="width: 100%; height: 100%; background: var(--neon-purple); border-radius: 4px;"></div>
                     </div>
                 </div>
-                
                 <div style="margin-top: 20px; padding: 15px; background: rgba(0, 243, 255, 0.1); border-radius: 8px;">
                     <h4>🚀 БЫСТРЫЕ ДЕЙСТВИЯ</h4>
                     <button onclick="downloadBook()" style="width: 100%; padding: 10px; margin: 5px 0; background: rgba(0, 243, 255, 0.2); border: 1px solid var(--neon-blue); color: var(--neon-blue); border-radius: 6px; cursor: pointer; transition: all 0.3s;">
@@ -1227,7 +1103,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Terminal -->
         <section id="terminal" class="terminal">
             <div class="terminal-header">
@@ -1243,7 +1118,6 @@
                 <div class="terminal-line">> Система готова к работе. Введите команду... <span class="cursor"></span></div>
             </div>
         </section>
-
         <!-- Секция загрузки -->
         <section id="download" class="terminal" style="margin: 100px 0;">
             <div class="terminal-header">
@@ -1256,7 +1130,6 @@
                 <div class="terminal-line">> Размер: 8.4 MB <span class="cursor"></span></div>
                 <div class="terminal-line">> Бонусные материалы: ВКЛЮЧЕНЫ <span class="cursor"></span></div>
                 <div class="terminal-line">> Статус: ГОТОВО К СКАЧИВАНИЮ <span class="cursor"></span></div>
-                
                 <div style="margin-top: 40px; text-align: center;">
                     <a href="#download-modal" class="cyber-button" style="font-size: 1.3rem; padding: 20px 50px;">
                         <i class="fas fa-file-download"></i>
@@ -1265,13 +1138,11 @@
                 </div>
             </div>
         </section>
-
         <!-- Секция "О проекте" -->
         <section style="background: rgba(26, 26, 46, 0.9); border-radius: 20px; padding: 50px; margin: 100px 0; border: 1px solid rgba(0, 243, 255, 0.3);">
             <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 40px; color: var(--neon-blue);">
                 🎯 ЦЕЛЬ ПРОЕКТА
             </h2>
-            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 <div style="background: rgba(0, 243, 255, 0.05); padding: 30px; border-radius: 15px; border-left: 4px solid var(--neon-blue);">
                     <h3 style="color: var(--neon-blue); margin-bottom: 15px;">📚 Структурированные знания</h3>
@@ -1285,7 +1156,6 @@
                         Реальные инструменты, скрипты, шаблоны и кейсы. Можно сразу применять в работе. AI-интеграция, автоматизация, аналитика.
                     </p>
                 </div>
-                
                 <div style="background: rgba(0, 255, 136, 0.05); padding: 30px; border-radius: 15px; border-left: 4px solid var(--neon-green);">
                     <h3 style="color: var(--neon-green); margin-bottom: 15px;">🚀 Будущее SMM</h3>
                     <p style="color: #ccc; line-height: 1.8;">
@@ -1794,6 +1664,7 @@
     </script>
 </body>
 </html>
+
 
 
 
