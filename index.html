@@ -161,7 +161,27 @@
         .cyber-nav {
             display: flex;
             gap: 30px;
+            justify-content: center;
+          align-items: center;
+            flex-wrap: wrap;
         }
+         /* Убедимся, что все ссылки одинаковые */
+            .nav-link {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            transition: all 0.3s;
+            position: relative;
+            white-space: nowrap; /* Чтобы текст не переносился */
+            text-align: center;
+            min-width: 100px; /* Все кнопки одинаковой ширины */
+}
+        
         .nav-link {
             color: #aaa;
             text-decoration: none;
@@ -682,36 +702,50 @@
             }
         }
         @media (max-width: 768px) {
-            .cyber-panel {
+           .cyber-panel {
                 padding: 10px 0;
-            }
-            .panel-content {
+        }
+    
+           .panel-content {
                 flex-direction: column;
                 gap: 15px;
-            }
-            .cyber-nav {
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .hologram-title {
-                font-size: 2.5rem;
-            }
-            .book-blocks {
-                grid-template-columns: 1fr;
-            }
-            .data-stats {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .back-to-top {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-                bottom: 20px;
-                right: 20px;
-            }
         }
+    
+          .cyber-nav {
+               gap: 10px;
+               flex-wrap: wrap;
+               justify-content: center;
+               width: 100%;
+               margin: 10px 0;
+       }
+    
+          .nav-link {
+              padding: 8px 12px;
+              font-size: 0.9rem;
+              min-width: 80px;
+       }
+    
+          .hologram-title {
+              font-size: 2.5rem;
+       }
+    
+          .book-blocks {
+              grid-template-columns: 1fr;
+      }
+    
+         .data-stats {
+             flex-wrap: wrap;
+             justify-content: center;
+      }
+    
+         .back-to-top {
+             width: 50px;
+             height: 50px;
+             font-size: 1.5rem;
+             bottom: 20px;
+             right: 20px;
+    }
+}
         @media (max-width: 480px) {
             .container {
                 padding: 10px;
@@ -746,32 +780,34 @@
     </div>
     <!-- Неоновая панель -->
     <div class="cyber-panel">
-        <div class="panel-content">
-            <div class="hologram-logo">SMM/DIGITAL/160</div>
-            
-            <nav aria-label="Основная навигация">
-                <div class="cyber-nav">
-                    <a href="#blocks" class="nav-link">Блоки</a>
-                    <a href="#paragraphs" class="nav-link">Параграфы</a>
-                    <a href="#seo" class="nav-link">О книге</a>
-                    <a href="#download" class="nav-link">Скачать</a>
-                </div>
-            </nav>
-            <div class="data-stats">
-                <div class="stat">
-                    <span class="stat-value">160</span>
-                    <span class="stat-label">Параграфов</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value">8</span>
+    <div class="panel-content">
+        <div class="hologram-logo">SMM/DIGITAL/160</div>
+        
+        <nav aria-label="Основная навигация" style="flex: 1; display: flex; justify-content: center; margin: 0 20px;">
+            <div class="cyber-nav">
+                <a href="#blocks" class="nav-link">Блоки</a>
+                <a href="#paragraphs" class="nav-link">Параграфы</a>
+                <a href="#seo" class="nav-link">О книге</a>
+                <a href="#download" class="nav-link">Скачать</a>
+            </div>
+        </nav>
+        
+        <div class="data-stats">
+            <div class="stat">
+                <span class="stat-value">160</span>
+                <span class="stat-label">Параграфов</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">8</span>
                     <span class="stat-label">Блоков</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-value">40+</span>
-                    <span class="stat-label">Инструментов</span>
-                </div>
+            </div>
+            <div class="stat">
+                <span class="stat-value">40+</span>
+                <span class="stat-label">Инструментов</span>
             </div>
         </div>
+    </div>
+</div>
     </div>
     <!-- Главный заголовок -->
     <div class="container">
@@ -1664,6 +1700,7 @@
     </script>
 </body>
 </html>
+
 
 
 
